@@ -20,7 +20,7 @@
             margin: 0;
         }
         </style>
-        <title>PETA LAHAN SAWAH DILINDUNGI (LSD) KOTA MATARAM</title>
+        <title>MATARUANG (MATARAM DALAM TATA RUANG)</title>
     </head>
     <body>
         <div id="map">
@@ -59,7 +59,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-8.630879239233751,116.05704802119082],[-8.551574577930284,116.21362714446839]]);
+        }).fitBounds([[-8.6269457280331,116.05590603406806],[-8.547641066729632,116.21248515734563]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -131,7 +131,7 @@
             return this._div;
         };
         title.update = function () {
-            this._div.innerHTML = '<h2>PETA LAHAN SAWAH DILINDUNGI (LSD) KOTA MATARAM</h2>';
+            this._div.innerHTML = '<h2>MATARUANG (MATARAM DALAM TATA RUANG)</h2>';
         };
         title.addTo(map);
         var abstract = new L.Control({'position':'topright'});
@@ -152,7 +152,7 @@
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = 'Keputusan Menteri Agraria dan Tata Ruang / Kepala Badan Pertanahan Nasional Republik Indonesia Nomor 1589/SK-HK.02.01/XII/2021 tentang Penetapan Peta Lahan Sawah yang Dilindungi pada Kabupaten/ Kota di Provinsi Sumatera Barat, Provinsi Banten, Provinsi Jawa Barat, Provinsi Jawa Tengah, Provinsi Daerah Istimewa Yogyakarta, Provinsi Jawa Timur, Provinsi Bali dan Provinsi Nusa Tenggara Barat';
+                this._div.innerHTML = 'MATARUANG merupakan Peta Tematik Digital berbasis WEB yang menyajikan informasi Peta Lahan Sawah Dilindungi (LSD) dan Peta Rencana Detil Tata Ruang (RDTR) secara informatif dan mudah diakses, sebagai upaya Kantor Pertanahan Kota Mataram untuk meningkatkan kualitas tata kelola melalui keterbukaan dan kemudahan informasi pertanahan. ';
         };
         abstract.addTo(map);
         var zoomControl = L.control.zoom({
@@ -208,7 +208,7 @@
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Zona</th>\
-                        <td>' + (feature.properties['NAMOBJ'] !== null ? autolinker.link(String(feature.properties['NAMOBJ']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="NAMOBJ">' + (feature.properties['NAMOBJ'] !== null ? autolinker.link(String(feature.properties['NAMOBJ']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kecamatan</th>\
