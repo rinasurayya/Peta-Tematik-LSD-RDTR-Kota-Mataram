@@ -1,1 +1,1 @@
-# Peta-Tematik-LSD-RDTR-Kota-Mataram
+# MATARUANG merupakan Peta Tematik Digital berbasis WEB yang menyajikan informasi Peta Lahan Sawah Dilindungi (LSD) dan Peta Rencana Detil Tata Ruang (RDTR) secara informatif dan mudah diakses, sebagai upaya Kantor Pertanahan Kota Mataram untuk meningkatkan kualitas tata kelola melalui keterbukaan dan kemudahan informasi pertanahan.
